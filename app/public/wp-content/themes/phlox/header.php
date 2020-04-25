@@ -20,6 +20,7 @@ do_action( "auxin_before_head_open", $post );
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <!-- devices setting -->
         <meta name="viewport"   content="initial-scale=1<?php echo auxin_get_option( 'enable_site_reponsiveness', 1 ) ? ',user-scalable=no,width=device-width' : ''; ?>">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <!-- outputs by wp_head -->
 <?php wp_head(); ?>

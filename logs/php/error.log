@@ -1,32 +1,39 @@
-[23-Apr-2020 16:24:08 UTC] WordPress database error Incorrect DATETIME value: '' for query 
+[25-Apr-2020 01:30:54 UTC] WordPress database error Incorrect DATETIME value: '' for query 
 			SELECT
 			( SELECT COUNT(*) FROM `wp_ulike` WHERE ( date_time <= NOW() AND date_time >= "" ) ) +
 			( SELECT COUNT(*) FROM `wp_ulike_activities` WHERE ( date_time <= NOW() AND date_time >= "" ) ) +
 			( SELECT COUNT(*) FROM `wp_ulike_comments` WHERE ( date_time <= NOW() AND date_time >= "" ) ) +
 			( SELECT COUNT(*) FROM `wp_ulike_forums` WHERE ( date_time <= NOW() AND date_time >= "" ) )
 			 made by require_once('wp-admin/admin.php'), require('wp-admin/menu.php'), require_once('wp-admin/includes/menu.php'), do_action('admin_menu'), WP_Hook->do_action, WP_Hook->apply_filters, wp_ulike_admin_pages->menus, apply_filters('wp_ulike_admin_sub_menu_title'), WP_Hook->apply_filters, wp_ulike_update_admin_sub_menu_title, wp_ulike_get_number_of_new_likes
-[23-Apr-2020 16:24:16 UTC] WordPress database error Incorrect DATETIME value: '' for query 
+[25-Apr-2020 01:31:03 UTC] WordPress database error Incorrect DATETIME value: '' for query 
 			SELECT
 			( SELECT COUNT(*) FROM `wp_ulike` WHERE ( date_time <= NOW() AND date_time >= "" ) ) +
 			( SELECT COUNT(*) FROM `wp_ulike_activities` WHERE ( date_time <= NOW() AND date_time >= "" ) ) +
 			( SELECT COUNT(*) FROM `wp_ulike_comments` WHERE ( date_time <= NOW() AND date_time >= "" ) ) +
 			( SELECT COUNT(*) FROM `wp_ulike_forums` WHERE ( date_time <= NOW() AND date_time >= "" ) )
 			 made by require_once('wp-admin/admin.php'), require('wp-admin/menu.php'), require_once('wp-admin/includes/menu.php'), do_action('admin_menu'), WP_Hook->do_action, WP_Hook->apply_filters, wp_ulike_admin_pages->menus, apply_filters('wp_ulike_admin_sub_menu_title'), WP_Hook->apply_filters, wp_ulike_update_admin_sub_menu_title, wp_ulike_get_number_of_new_likes
-[23-Apr-2020 16:24:16 UTC] WordPress database error Incorrect DATETIME value: '' for query 
+[25-Apr-2020 01:31:05 UTC] WordPress database error Incorrect DATETIME value: '' for query 
 			SELECT
 			( SELECT COUNT(*) FROM `wp_ulike` WHERE ( date_time <= NOW() AND date_time >= "" ) ) +
 			( SELECT COUNT(*) FROM `wp_ulike_activities` WHERE ( date_time <= NOW() AND date_time >= "" ) ) +
 			( SELECT COUNT(*) FROM `wp_ulike_comments` WHERE ( date_time <= NOW() AND date_time >= "" ) ) +
 			( SELECT COUNT(*) FROM `wp_ulike_forums` WHERE ( date_time <= NOW() AND date_time >= "" ) )
 			 made by require_once('wp-admin/admin.php'), require('wp-admin/menu.php'), require_once('wp-admin/includes/menu.php'), do_action('admin_menu'), WP_Hook->do_action, WP_Hook->apply_filters, wp_ulike_admin_pages->menus, apply_filters('wp_ulike_admin_sub_menu_title'), WP_Hook->apply_filters, wp_ulike_update_admin_sub_menu_title, wp_ulike_get_number_of_new_likes
-[23-Apr-2020 16:24:19 UTC] WordPress database error Incorrect DATETIME value: '' for query 
+[25-Apr-2020 01:31:06 UTC] WordPress database error Incorrect DATETIME value: '' for query 
 			SELECT
 			( SELECT COUNT(*) FROM `wp_ulike` WHERE ( date_time <= NOW() AND date_time >= "" ) ) +
 			( SELECT COUNT(*) FROM `wp_ulike_activities` WHERE ( date_time <= NOW() AND date_time >= "" ) ) +
 			( SELECT COUNT(*) FROM `wp_ulike_comments` WHERE ( date_time <= NOW() AND date_time >= "" ) ) +
 			( SELECT COUNT(*) FROM `wp_ulike_forums` WHERE ( date_time <= NOW() AND date_time >= "" ) )
 			 made by require_once('wp-admin/admin.php'), require('wp-admin/menu.php'), require_once('wp-admin/includes/menu.php'), do_action('admin_menu'), WP_Hook->do_action, WP_Hook->apply_filters, wp_ulike_admin_pages->menus, apply_filters('wp_ulike_admin_sub_menu_title'), WP_Hook->apply_filters, wp_ulike_update_admin_sub_menu_title, wp_ulike_get_number_of_new_likes
-[23-Apr-2020 16:24:19 UTC] WordPress database error Incorrect DATETIME value: '' for query 
+[25-Apr-2020 01:31:08 UTC] WordPress database error Incorrect DATETIME value: '' for query 
+			SELECT
+			( SELECT COUNT(*) FROM `wp_ulike` WHERE ( date_time <= NOW() AND date_time >= "" ) ) +
+			( SELECT COUNT(*) FROM `wp_ulike_activities` WHERE ( date_time <= NOW() AND date_time >= "" ) ) +
+			( SELECT COUNT(*) FROM `wp_ulike_comments` WHERE ( date_time <= NOW() AND date_time >= "" ) ) +
+			( SELECT COUNT(*) FROM `wp_ulike_forums` WHERE ( date_time <= NOW() AND date_time >= "" ) )
+			 made by require_once('wp-admin/admin.php'), require('wp-admin/menu.php'), require_once('wp-admin/includes/menu.php'), do_action('admin_menu'), WP_Hook->do_action, WP_Hook->apply_filters, wp_ulike_admin_pages->menus, apply_filters('wp_ulike_admin_sub_menu_title'), WP_Hook->apply_filters, wp_ulike_update_admin_sub_menu_title, wp_ulike_get_number_of_new_likes
+[25-Apr-2020 01:31:09 UTC] WordPress database error Incorrect DATETIME value: '' for query 
 			SELECT
 			( SELECT COUNT(*) FROM `wp_ulike` WHERE ( date_time <= NOW() AND date_time >= "" ) ) +
 			( SELECT COUNT(*) FROM `wp_ulike_activities` WHERE ( date_time <= NOW() AND date_time >= "" ) ) +

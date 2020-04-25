@@ -42,10 +42,11 @@ get_header(); ?>
                                         <div class="col xl12 center-align">   
                                             <div class="titlebox">
                                                 <h1 id="singleRecipeTitle" ><?php echo get_the_title();?></h1>
-                                                <b class="white-text"><?php print_r(get_field('star_rating'));?>/5 Stars</b>
+                                                <!-- <b class="white-text"><?php print_r(get_field('star_rating'));?>/5 Stars</b> -->
+                                                <?php for($star=0;$star<get_field('star_rating'); $star++){echo '<i class="material-icons orange-text">star</i>';};?>
+                                                <?php for($star=0;$star<5-get_field('star_rating'); $star++){echo '<i class="material-icons black-text">star</i>';};?>
                                                 <br>
                                                 <p class="white-text">Reviewer: <?php echo get_the_author();?></p>
-                                                <b class="singleRecipeTitleLevel">This restaurant is <?php print_r(get_field('tags'));?></b>
                                             </div>          
                                         </div>  
                                     </div>
@@ -70,51 +71,52 @@ get_header(); ?>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col xl4 m4 s12">
-                                            <h3><b>Restaurant Info</b></h3>
-                                            <h5>Contact</h5>
-                                            <b>Telephone:</b>
-                                            <?php print_r(get_field('resturant_phone_number'));?>
-                                            <br>
-                                            <b>Address:</b>
-                                            <?php print_r(get_field('restaurant_address'));?>
-                                            
-                                            <br>
-                                            <br>
-                                            <h5>Additional Information</h5>
-                                            <b>Dine In: </b>
-                                            <?php print_r((get_field('dine_in')[0]) == "Yes" ? ✔ : ❌);?>
-                                            <br>
-                                            <b>Take Out</b>
-                                            <?php print_r((get_field('take_out')[0]) == "Yes" ? ✔ : ❌);?>
-                                            <br>
-                                            <b>Child Friendly</b>
-                                            <?php print_r((get_field('vegetarian')[0]) == "Yes" ? ✔ : ❌);?>
-                                            <br>
-                                            <b>Vegan Options</b>
-                                            <?php print_r((get_field('dine_in')[0]) == "Yes" ? ✔ : ❌);?>
-                                            <br>
-                                            <b>Vegetarian Options</b>
-                                            <?php print_r((get_field('dine_in')[0]) == "Yes" ? ✔ : ❌);?>
-                                            <br>
-                                            <b>Halaal Meats</b>
-                                            <?php print_r((get_field('dine_in')[0]) == "Yes" ? ✔ : ❌);?>
-                                            <br>
-                                            <br>
-                                            <h5>Opening Hours</h5>
-                                            <?php print_r(get_field('opening_hours'));?>
-                                            <br>
-                                        </div>
-                                        <div class="col xl8 m8 s12">
-                                            <h3><b>Review</b></h3>
-                                            <?php print_r(get_field('review'));?>
-                                        </div>
+                                    <div class="col xl8 m8 s12">
+                                        <br>
+                                        <br>
+                                        <h1><b>Review</b></h1>
+                                        <?php print_r(get_field('review'));?>
                                     </div>
+                                    <div class="col xl4 m4 s12">
+                                        <br><br>
+                                        <h1><b>Restaurant Info</b></h1>
+                                        <h4>Contact</h4>
+                                        <i class="material-icons">phone</i>
+                                        <?php print_r(get_field('resturant_phone_number'));?>
+                                        <br>
+                                        <i class="material-icons">location_on</i>
+                                        <?php print_r(get_field('restaurant_address'));?>
+                                        <br>
+                                        <br>
+                                        <h4>Additional Information</h4>
+                                        <b>Dine In: </b>
+                                        <?php print_r((get_field('dine_in')[0]) == "Yes" ? ✔ : ❌);?>
+                                        <br>
+                                        <b>Take Out</b>
+                                        <?php print_r((get_field('take_out')[0]) == "Yes" ? ✔ : ❌);?>
+                                        <br>
+                                        <b>Child Friendly</b>
+                                        <?php print_r((get_field('vegetarian')[0]) == "Yes" ? ✔ : ❌);?>
+                                        <br>
+                                        <b>Vegan Options</b>
+                                        <?php print_r((get_field('dine_in')[0]) == "Yes" ? ✔ : ❌);?>
+                                        <br>
+                                        <b>Vegetarian Options</b>
+                                        <?php print_r((get_field('dine_in')[0]) == "Yes" ? ✔ : ❌);?>
+                                        <br>
+                                        <b>Halaal Meats</b>
+                                        <?php print_r((get_field('dine_in')[0]) == "Yes" ? ✔ : ❌);?>
+                                        <br>
+                                        <br>
+                                        <h5>Opening Hours</h5>
+                                        <?php print_r(get_field('opening_hours'));?>
+                                        <br>
+                                    </div>
+                                </div>
                             </div>
                         </section>
                     </div><!-- end content -->
                 </div><!-- end primary -->
-                <!-- <?php get_sidebar(); ?> -->
             </div><!-- end container -->
         </div><!-- end wrapper -->
     </main><!-- end main -->

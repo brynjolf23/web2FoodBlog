@@ -42,6 +42,8 @@ get_header(); ?>
                                     <div class="col xl12 center-align">
                                         <div class="titlebox">
                                             <h1 id="singleRecipeTitle" ><?php echo get_the_title( $artistID );?></h1>
+                                            <?php for($star=0;$star<get_field('rating'); $star++){echo '<i class="material-icons orange-text">star</i>';};?>
+                                            <?php for($star=0;$star<5-get_field('rating'); $star++){echo '<i class="material-icons black-text">star</i>';};?>
                                             <p class="white-text">Made with ❤ by <?php echo get_the_author();?></p>
                                             <b class="singleRecipeTitleLevel">Recipe Difficulty: <?php print_r(get_field('level'));?></b>
                                         </div>

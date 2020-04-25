@@ -34,7 +34,8 @@ get_header();?>
                                                         </div>
                                                         <div class="card-content">
                                                             <span class="card-title"><?php the_title(); ?></span>
-                                                            <?php print_r(get_field('rating'));?>/5 Stars
+                                                            <?php for($star=0;$star<get_field('rating'); $star++){echo '<i class="material-icons orange-text">star</i>';};?>
+                                                            <?php for($star=0;$star<5-get_field('rating'); $star++){echo '<i class="material-icons black-text">star</i>';};?>
                                                         </div>
                                                         <div class="card-action">
                                                             <a class="btn-flat red-text" href="<?php the_permalink(); ?>">View</a>

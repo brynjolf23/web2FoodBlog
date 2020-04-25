@@ -26,44 +26,50 @@ get_header(); ?>
                             <div class="container">
                                 <h4 class="center-align">Categories</h4>
                                 <div class="row">
-                                    <div class="col offset-xl3 offset-l3 offset-m3 xl1 l1 m2 s4 catpill"><a href="https://trinieats.varion.co/category/chinese_cusine">Chinese</a></div>
-                                    <div class="col xl1 l1 m2 s4 catpill"><a href="https://trinieats.varion.co/category/creole_cusine">Creole</a></div>
-                                    <div class="col xl1 l1 m2 s4 catpill"><a href="https://trinieats.varion.co/category/indian_cusine">Indian</a></div>
-                                    <div class="col xl1 l1 m2 s4 catpill"><a href="https://trinieats.varion.co/category/italian_cusine">Italian</a></div>
-                                    <div class="col xl1 l1 m2 s4 catpill"><a href="https://trinieats.varion.co/category/spanish_cusine">Spanish</a></div>
+                                    <div class="col xl12 l12 m12 s12">
+                                        <div class="catpillParent">
+                                            <div class="catpill"><a href="https://trinieats.varion.co/category/chinese_cusine">Chinese</a></div>
+                                            <div class="catpill"><a href="https://trinieats.varion.co/category/creole_cusine">Creole</a></div>
+                                            <div class="catpill"><a href="https://trinieats.varion.co/category/indian_cusine">Indian</a></div>
+                                            <div class="catpill"><a href="https://trinieats.varion.co/category/italian_cusine">Italian</a></div>
+                                            <div class="catpill"><a href="https://trinieats.varion.co/category/spanish_cusine">Spanish</a></div>
+                                        </div>                                        
+                                    </div>
                                 </div>
                             </div>
                             <div class="container">
                             <h4 class="center-align">All Recipes</h4>
                                 <div class="row">
-                                    <?php 
-                                        $wpb_all_query = new WP_Query(array('post_type'=>'recipe', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
-                                        
-                                        <?php if ( $wpb_all_query->have_posts() ) : ?>
-                                            <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
-                                                <div class="col xl3 ll3 m4 s12">
-                                                    <div class="card">
-                                                        <div class="card-image">
-                                                            <?php 
-                                                                    $image = get_field('thumbnail');
-                                                                    if( !empty( $image ) ): ?>
-                                                                        <img class="recipesItemCardImage" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                                                            <?php endif; ?>
+                                    <div class="col xl12 l12 m12 s12">
+                                        <div class="listParent">
+                                            <?php 
+                                                $wpb_all_query = new WP_Query(array('post_type'=>'recipe', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
+                                                <?php if ( $wpb_all_query->have_posts() ) : ?>
+                                                    <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
+                                                        <div class="card listCard">
+                                                            <div class="card-image">
+                                                                <?php 
+                                                                        $image = get_field('thumbnail');
+                                                                        if( !empty( $image ) ): ?>
+                                                                            <img class="recipesItemCardImage" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                                                <?php endif; ?>
+                                                            </div>
+                                                            <div class="card-content">
+                                                                <span class="card-title"><?php the_title(); ?></span>
+                                                                <?php for($star=0;$star<get_field('rating'); $star++){echo '<i class="material-icons orange-text">star</i>';};?>
+                                                                <?php for($star=0;$star<5-get_field('rating'); $star++){echo '<i class="material-icons black-text">star</i>';};?>
+                                                            </div>
+                                                            <div class="card-action">
+                                                                <a class="btn-flat red-text" href="<?php the_permalink(); ?>">View</a>
+                                                            </div>
                                                         </div>
-                                                        <div class="card-content">
-                                                            <span class="card-title"><?php the_title(); ?></span>
-                                                            <?php print_r(get_field('rating'));?>/5 Stars
-                                                        </div>
-                                                        <div class="card-action">
-                                                            <a class="btn-flat red-text" href="<?php the_permalink(); ?>">View</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            <?php endwhile; ?>
-                                            <?php wp_reset_postdata(); ?>
-                                        <?php else : ?>
-                                            <p><?php _e( 'Sorry, no recipes found :(' ); ?></p>
-                                    <?php endif; ?>
+                                                    <?php endwhile; ?>
+                                                    <?php wp_reset_postdata(); ?>
+                                                <?php else : ?>
+                                                    <p><?php _e( 'Sorry, no recipes found :(' ); ?></p>
+                                            <?php endif; ?>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </section>
