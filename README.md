@@ -6,3 +6,5 @@ Download all the contents.
 Zip all except the readme.md file.  
 Import zip in local.  
 Use the website as you would any other local wordpress website.  
+  
+Click on the wiki tab above to view the documentation for this project.  
